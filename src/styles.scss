@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+* {	font-family: $nunito-font; }
+.sans-pro { font-family: $sanspro-font; }
+
+.btn-custom {
+	border: 2px solid;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 13px;
+	cursor: pointer;
+	width: 102px;
+	height: 38px;
+	border-radius: .6rem;
+	a {
+		color: black;
+		list-style: none;
+	}
+	a:hover { 
+		color:black; 
+		text-decoration: none; 
+	}
+}
+.btn-empty {
+	color: black;
+	background-color: Transparent;
+	border-color: black;
+}
+.btn-full {
+	color: white;
+	background-color: black;
+	border-color: black;
+}
+
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	font-size: 10px;
+	a { 
+		color: black;
+		text-decoration: none; 
+	}
+	a:hover { 
+		color:red; 
+		text-decoration: none; 
+	}
+}
+.miejsce {height: 200px;}

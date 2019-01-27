@@ -1,0 +1,24 @@
+.main-photo {
+	padding: 0;
+	background: url("/../assets/img/main-photo.jpeg") no-repeat center;
+	width: 100%;
+	max-width: 1300px;
+	height: 168px;
+	background-size: cover;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.pt-2375 { margin-top: 2.375rem; }
+.info-title {
+	font-size: 2.375rem; 
+}
+.info-description {
+	white-space: pre-line;
+	margin-top: 4.375rem;
+	font-size: 17px;
+	line-height: 1.6;
+}
+.info-navigation {
+	margin-top: 2.875rem;
+}
