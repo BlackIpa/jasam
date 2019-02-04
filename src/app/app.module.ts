@@ -10,13 +10,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AutismComponent } from './autism/autism.component';
 import { AutismService } from './autism.service';
+import { OfferComponent } from './offer/offer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    AutismComponent
+    AutismComponent,
+    OfferComponent,
+    ContactComponent
   ],
   imports: [
 		BrowserModule,

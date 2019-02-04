@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-	
+	burgerStatus: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
-  }
-
+	}
+	
+	changeBurgerToX(){
+		console.log("Koń");
+			this.burgerStatus = !this.burgerStatus;       
+	}
 }

@@ -8,23 +8,16 @@ import { AutismService } from '../autism.service';
   styleUrls: ['./autism.component.scss']
 })
 export class AutismComponent implements OnInit {
-  autismPart: { name: string, title: string, text: string, previousLink: string[] };
+  autismPart: { name: string, title: string, text: string, previousLink?: Array<String>, nextLink?: Array<String> };
 
   constructor(private route: ActivatedRoute, private autismService: AutismService) { }
 
   ngOnInit() {
-    this.autismPart = this.autismService.sendCorrectAutismPart(this.route.snapshot.params['part'])
+		this.autismPart = this.autismService.sendCorrectAutismPart(this.route.snapshot.params['part'])
     this.route.params.subscribe(
       (params: Params) => {
         this.autismPart = this.autismService.sendCorrectAutismPart(params['part']);
       }
-    );
+		);
   }
-
- 	getCorrectPath(link: String) {
-		let path: string;
-		path = (link == "autyzm") ? "autyzm" : "autyzm/" + link.toLowerCase();
-		console.log(path)
-		return path
-	}
 }
