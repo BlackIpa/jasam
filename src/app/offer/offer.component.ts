@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PRICES } from './prices';
 
 @Component({
   selector: 'app-offer',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offer.component.scss']
 })
 export class OfferComponent implements OnInit {
+	prices = PRICES;
 
   constructor() { }
 

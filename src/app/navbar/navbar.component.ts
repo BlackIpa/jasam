@@ -6,15 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-	burgerStatus: boolean = false;
 
-  constructor() { }
-
-  ngOnInit() {
-	}
+	constructor() { }
 	
-	changeBurgerToX(){
-		console.log("Koń");
-			this.burgerStatus = !this.burgerStatus;       
+  ngOnInit() {
+		if (window.innerWidth > 578) {
+			window.innerWidth;
+			document.getElementById('navbarSupportedContent').removeAttribute('data-toggle');
+		}
+	}
+
+	hideNavbar() {
+		let element = document.getElementsByClassName('navbar-toggler');
+		let navColl = document.getElementById('navbarSupportedContent');
+		element[0].classList.add('collapsed');
+		document.getElementById('nav-icon').classList.add('collapsed');
+		navColl.classList.add('collapsed');
+		navColl.classList.remove('show');
 	}
 }

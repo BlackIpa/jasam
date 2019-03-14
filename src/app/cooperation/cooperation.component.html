@@ -1,0 +1,22 @@
+<div class="main-photo mx-auto">
+	<div class="container pt-3 text-center">
+			<div class="breadcrumbs" aria-label="breadcrumb">
+				<p class="mx-auto mb-0"><a [routerLink]="['/']">STRONA GŁÓWNA</a> / AUTYZM /	PRZEBIEG WSPÓŁPRACY</p>
+			</div>
+		<p class="main-photo-title text-center">Przebieg współpracy</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row mb-70" *ngFor="let step of steps; let i = index">
+		<div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end mb-4">
+			<img src="{{step.image}}" class="step-image" [attr.id]="'step' + i" [attr.alt]="'step' + i">
+		</div>
+		<div class="col-12 col-md-8 d-flex justify-content-center justify-content-md-start">
+			<div class="step-text text-center text-md-left" [attr.id]="'text' + i">
+				<h2 class="mx-auto mx-md-0 mb-4 mb-md-3">{{step.title}}</h2>
+				<p class="lh-13" [innerHTML]="step.description"></p>
+			</div>
+		</div>
+	</div>
+	<div class="miejsce"></div>
+</div>

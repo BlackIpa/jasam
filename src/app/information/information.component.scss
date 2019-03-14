@@ -1,0 +1,72 @@
+@import '../../variables';
+.info-description {
+	white-space: pre-line;
+	line-height: 1.6;
+	margin-top: 4.375rem;
+	color: #616161;
+}
+ul {
+	margin-bottom: 1.5rem;
+}
+h2 {
+	font-size: 24px;
+	margin-bottom: 1rem;
+}
+.footnote {
+	font-size: 13px;
+}
+.autism-cover {
+	background: url("/../assets/img/autism-bcg.jpg") no-repeat center;
+	background-size: cover;
+}
+.symptoms-cover {
+	background: url("/../assets/img/symptoms-bcg.jpg") no-repeat center;
+	background-size: cover;
+}
+.diagnosis-cover {
+	background: url("/../assets/img/diagnosis-bcg.jpg") no-repeat center;
+	background-size: cover;
+}
+.info-navigation {
+	margin-top: 2.875rem;
+}
+.previous-link {
+	@include zero-horizontal-padding;
+}
+.prev-link {
+	display: inline-block;
+}
+.fa-chevron-left, fa-chevron-right {
+	font-size: 24px;
+}
+.autism-icon {
+	width: 42px;
+	height: 42px;
+	margin-bottom: .8rem;
+}
+.symptoms-icon {
+	width: 56px;
+	height: 56px;
+	margin-bottom: 0;
+}
+.contact-us {
+	height: 220px;
+	margin-top: 4.5rem;
+	border-top: 1px solid #0075b3;
+	border-bottom: 1px solid #0075b3;
+	div {
+		margin-top: 1.6rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	p {
+		max-width: 380px;
+		margin-bottom: 1.6rem;
+	}
+}
+@media (min-width: 560px) {
+	.show-on-smaller {
+		display: none;
+	}
+}

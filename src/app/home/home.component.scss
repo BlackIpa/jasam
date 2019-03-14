@@ -1,38 +1,61 @@
 @import '../../variables';
 html body {font-family: 'Nunito', sans-serif; width: 100%!important; }
-
 .welcome {
 	padding: 0;
-	background: url("/../assets/img/main-photo.jpeg") no-repeat center;
+	background: url("/../assets/img/main-photo.png") no-repeat center;
 	width: 100%;
-	max-width: 1300px;
-	height: 450px;
+	max-width: 1200px;
+	height: 580px;
 	background-size: cover;
 	display: flex;
 	flex-direction: row-reverse;
-	align-items: center;
+	.container {
+		margin-top: 105px;
+	}
 }
 .welcome-text {
-	max-width: 40%;
+	width: 450px;
+	color: white;
+	h1 {
+		font-size: 2.1875rem;
+		font-weight: 600;
+		margin-bottom: .7rem;
+	}
+	p {
+		font-weight: 500;
+		margin-bottom: 1.2rem;
+	}
+	img {
+		width: 2.625rem;
+		height: 2.625rem;
+		margin-top: 2rem;
+	}
 }
 .col4-part {
-	margin-bottom: 4rem;
+	margin-bottom: 2.7rem;
 }
 .col4-icon {
-	width: 2.875rem;
-	height: 2.875rem;
-	margin-bottom: 1.375rem;
+	width: 3.375rem;
+	height: 3.375rem;
+	margin-bottom: 1.6rem;
+}
+.col4-div {
+	height: 5.6rem;
+	display: flex;
+	align-items: center;	
 }
 .col4-h2 {
-	font-size: 1.675rem;
-	padding-left: 2rem;
-	padding-right: 2.5rem;
-	margin-bottom: 1rem;
+	max-width: 10.75rem;
+	margin-bottom: 0;
+}
+.col4-p {
+	max-width: 15rem;
+	margin-top: .8rem;
+	color: gray;
 }
 .circle-photo {
 	width: 330px;
 	height: 330px;
-	padding-right: 0;
 }
 .pl-28 { padding-left: 2.8rem; }
 .pr-28 { padding-right: 2.8rem; }
@@ -49,17 +72,6 @@ html body {font-family: 'Nunito', sans-serif; width: 100%!important; }
 	font-size: 1.1rem;
 	margin-bottom: 1.2rem;
 }
-
-.col3-p {
-	max-width: 14.75rem;
-	margin-bottom: 1.2rem;
-}
-.images-3col {
-	position: relative;
-	width: 286px;
-	height: 240px;
-	margin-bottom: 1.5rem;
-}
 .rectangle-photo {
 	position: relative;
 	width: 100%;
@@ -72,4 +84,87 @@ html body {font-family: 'Nunito', sans-serif; width: 100%!important; }
 .padx-25rem {
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
+
+}
+@media (max-width: 991.95px) {
+	.break-on-992 {	width: 100%; }
+}
+@media (max-width: 768px) and (min-width: 620px) { 
+	.col4-part > div {
+		margin-left: 2rem;
+		margin-right:  2rem;
+	}
+}
+@media (max-width: 620px) {
+	.break-on-620 {	width: 100%; }
+	.col4-part .col-12:nth-child(3) {	margin-top: 3rem;	}
+}
+@media (max-width: 768px) { 
+	.welcome {
+		background: url("/../assets/img/main-photo.png") no-repeat center;
+		height: 450px;
+		background-size: cover;
+	}
+}
+@media (max-width: 575.95px) { 
+	.welcome {
+		background: url("/../assets/img/main-photo.png") no-repeat center;
+		height: 510px;
+		background-size: cover;
+	}
+	.welcome-text {
+		text-align: center!important;
+		width: 276px;
+		@include push--auto;
+		button {
+			display: none;
+		}
+	}
+	.intro-size {
+		max-width: 85%;
+		margin-bottom: 1rem;
+	}
+	.mt-sm-70 {
+		margin-top: 70px;
+	}
+	.col4-part {
+		text-align: center!important;
+		@include push--auto;
+		width: 15.5rem;
+		margin-bottom: 3rem!important;
+		.col4-h2 {
+			@include zero-horizontal-padding;
+		}
+		.col-12 {
+			margin-top: 3rem;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	.center-small {
+		display: flex;
+		justify-content: center;
+	}
+	.circle-photo {
+		width: 282px;
+		height: 282px;
+	}
+	.circle-text {
+		align-items: center!important;
+	}
+	.pl-28 {
+		padding-left: 15px!important;
+	}
+	.circle-larg-p {
+		padding: {
+			left: 0;
+			right: 0;
+		}
+		min-width: 270px;
+		text-align: center;
+		p {
+			@include push--auto;
+		}
+	}
 }

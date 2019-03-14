@@ -1,3 +1,54 @@
-<p>
-  offer works!
-</p>
+<div class="main-photo mx-auto">
+	<div class="container pt-3 text-center">
+			<div class="breadcrumbs" aria-label="breadcrumb">
+				<p class="mx-auto mb-0"><a [routerLink]="['/']">STRONA GŁÓWNA</a> / OFERTA /	CENNIK</p>
+			</div>
+		<p class="main-photo-title text-center">Cennik</p>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row justify-content-center center-prices">
+		<div *ngFor="let price of prices; let i = index" class="price-part gray-bcg col-12 col-md-6 col-lg-4 mx-2 px-0 px-sm-auto mt-4">
+			<div class="cirlce-row" [ngClass]="{ 'hidden-on-small': price.hidden }">
+				<div class="circle-bcg">
+					<img src="{{price.car}}" class="circle-icon" alt="Icon">
+				</div>
+			</div>
+			<div>
+				<div class="price-summary row mx-0 mb-3">
+					<div class="col-6 pt-3">
+						<p class="price-title" innerHTML="{{price.name}}"></p>
+						<p class="price-bundle" [ngClass]="{ 'parents-color': price.audience == 'DLA RODZICA' }">{{price.kind}}</p>
+						<p class="price-audience">{{price.audience}}</p>
+					</div>
+					<div class="col-6 mt-3">
+						<p class="price-price float-left" [ngClass]="{ 'font-18': i == 8 }"  innerHTML="{{price.price}}"></p>
+						<div class="arrow-wrap show-on-small" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
+							<span class="arrow collapsed" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
+								<span></span>
+								<span></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="collapse" [attr.id]="'collapse' + i">
+					<div class="price-details row mx-3" [ngClass]="{ 'col123px': [0,7,8].includes(i) }">
+						<div class="col-12">
+							<div class="align-middle h-100">
+								<p class="price-detail" innerHTML="{{price.description}}"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="price-button row mx-auto hidden-on-small">
+					<div class="mx-auto">
+						<button type="button" class="btn-custom btn-blue" [routerLink]="['/kontakt']">UMÓW WIZYTĘ</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="miejsce"></div>

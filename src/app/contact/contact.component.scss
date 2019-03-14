@@ -1,43 +1,151 @@
+@import '../../variables';
+.main-photo {
+	background: url("/../assets/img/contact.jpg") no-repeat center;
+	background-size: cover;
+}
+.intro-p {
+	max-width: 500px;
+}
+.contact-detail {
+	p { margin-bottom: 0; }
+	p:first-child {
+		font-size: .8rem;
+		color: #9e9e9e;
+		font-family: $sanspro-font;
+	}
+	p:nth-child(2) {
+		font-size: 1.25rem;
+		font-weight: 500;
+	}
+	p:nth-child(3) {
+		color: #757575;
+		font-family: $sanspro-font;
+	}
+}
+.contact-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-top: 1.5rem;
+}
+.form-control {
+	border: 1px solid #9e9e9e;
+	padding: .95rem;
+}
+::placeholder {
+  color: #bdbdbd;
+  font-size: .9rem;
+}
+textarea {
+	resize: none;
+	height: 10rem!important;
+}
+.map {
+	margin-top: 3rem;
+}
+agm-map {
+	width: 100%;
+	max-width: 1200px;
+	height: 310px;
+}
 .show-on-small {
 	width: 220px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.details-address, .details-phone, .details-email {
+	margin-bottom: 2.8rem;
+}
+@media (min-width: 1200px) {
+	.form-column {
+		padding-right: 4.5rem;
+	}
 }
 @media (min-width: 768px) { 
 	.show-on-small {
 		display: none;
 	}
 }
-@media (max-width: 767.99px) { 
+@media (max-width: 991.95px) { 
 	.show-on-large {
 		display: none;
 	}                 
-	.intro-p {
-		 display: none;
-	}
-}
-@media (max-width: 575.99px) { 
 	.form-column {
 		order: 2;
-		width: 290px;
 		max-width: 90%;
 	}
 	.details-column {
 		order: 1;
-		width: 200px;
+		max-width: 90%;
 		text-align: center;
 	}
-	.float-right {
-		float: none!important;
-	}
 	.details-phone {
-		order: 1;
+		order: 2;
 	}
 	.details-address {
+		order: 1;
+	}
+	.details-email {
 		order: 3;
+	}
+	.intro-size {
+		margin-bottom: 2.2rem;
+	}
+	.map {
+		margin-top: 3.3rem;
+	}
+}
+@media (max-width: 850px) { 
+	.details-address {
+		margin-left: 1rem;
+	}
+}
+@media (max-width: 767.99px) { 
+	.details-part {
+		max-width: 180px;
+	}
+	.mt-8 {
+		margin-top: 4rem;
+	}
+}
+@media (max-width: 650px) { 
+	.details-part {
+		width: 90%;
+	}
+	.details-address {
+		margin-left: auto;
+	}
+}
+@media (max-width: 575.5px) { 
+	.mb-28 { margin-bottom: 2rem; }
+	.maxw-70-sm {
+		max-width: 70%;
+	}
+	.form-column {
+		width: 290px;
+	}
+	.details-part {
+		max-width: 100%;
+	}
+	.details-column {
+		width: 200px;
+		text-align: center;
 	}
 	.details-email {
 		order: 2;
 		margin-bottom: 2.8rem;
+	}
+	.details-phone {
+		order: 1;
+		margin-top: 2.8rem;
+	}
+	.details-address {
+		order: 3;
+	}
+	.intro-size {
+		margin-bottom: 0;
+	}
+	.contact-icon {
+		margin-top: 1rem;
+		margin-bottom: .5rem;
 	}
 }

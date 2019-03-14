@@ -1,0 +1,52 @@
+<div class="main-photo mx-auto" 
+[ngClass]="getBackground(infoPart.name)">
+	<div class="container pt-3 text-center" [ngClass]="{'white-text': infoPart.name == 'czym jest autyzm' || infoPart.name == 'misja'}">
+			<img src="{{ infoPart.icon }}" class="autism-icon" alt="Icon" 
+			[ngClass]="{'symptoms-icon': infoPart.name == 'symptomy'}" [ngClass]="{'hidden': infoPart.name == 'misja'}">
+			<div class="breadcrumbs" aria-label="breadcrumb">
+				<p class="mx-auto mb-0"><a [routerLink]="['/']">STRONA GŁÓWNA</a> / AUTYZM /	{{ infoPart.name | uppercase }}</p>
+			</div>
+		<p class="main-photo-title text-center">{{ infoPart.title }}</p>
+	</div>
+</div>
+
+<div class="container px-2">
+	<div class="row mx-3">
+		<div class="col-12 px-0 px-sm-auto">
+			<div class="info-description" [innerHTML]="infoPart.text"></div>
+		</div>
+	</div>
+	<div class="row info-navigation px-0 px-sm-3 mx-3">
+			<div class="col-6 px-0">
+				<div *ngIf="infoPart.previousLink" class="px-0 float-left">
+					<div class="prev-link">
+						<i class='fas fa-chevron-left pr-1 pr-sm-3 align-middle'></i>
+						<button type="submit" class="btn-custom btn-empty mr-2">
+							<a [routerLink]="['/', infoPart.previousLink]">{{ infoPart.previousLink.toUpperCase() }}</a></button>
+					</div>
+					<div class="prev-link">
+						<i *ngIf="infoPart.previousLink2" class='fas fa-chevron-left pr-1 pr-sm-3 align-middle show-on-smaller'></i>
+						<button *ngIf="infoPart.previousLink2" type="submit" class="btn-custom btn-empty mt-2 mt-sm-0"><a [routerLink]="['/', infoPart.previousLink2]">{{ infoPart.previousLink2.toUpperCase() }}</a></button>						
+					</div>
+				</div>
+			</div>
+			<div class="col-6 px-0">
+				<div *ngIf="infoPart.nextLink" class="px-0 col-6next-link float-right">
+					<div class="prev-link">
+						<button type="submit" class="btn-custom btn-empty"><a [routerLink]="['/', infoPart.nextLink]">{{ infoPart.nextLink.toUpperCase() }}</a></button>
+						<i *ngIf="infoPart.nextLink != 'podejscie'" class='fas fa-chevron-right pl-1 pl-sm-3 align-middle'></i>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+
+<div class="row contact-us" *ngIf="infoPart.name == 'diagnoza'">
+	<div class="col-11 col-sm-7 mx-auto text-center">
+		<h2>Potrzebujesz rady?</h2>
+		<p class="mx-auto">Wyślij nam wiadomość, a oddzwonimy do Ciebie by odpowiedzieć na Twoje pytania.</p>
+		<button type="button" class="btn-custom btn-blue" [routerLink]="['/kontakt']">KONTAKT</button>
+	</div>
+</div>
+
+<div class="miejsce"></div>
