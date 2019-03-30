@@ -35,7 +35,7 @@ import { TeamComponent } from './team/team.component';
 		HttpClientModule,
 		AppRoutingModule,
 		AgmCoreModule.forRoot({
-			apiKey: "?"
+			apiKey: "AIzaSyBmIPPbj1mWRAJWdOLKLEbrBupSUPtzR7Q"
 		}),
 		BsDropdownModule.forRoot()
   ],

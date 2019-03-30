@@ -1,7 +1,7 @@
 <div class="container navbar-wrap">
 	<nav id="navbar" class="navbar navbar-expand-sm navbar-light">
 		<a class="navbar-brand" [routerLink]="['/']" (click)="hideNavbar()">
-			<img src="assets/img/logo.jpg" alt="">
+			<img src="assets/img/logo.png" alt="Logo">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<div id="nav-icon" data-toggle="collapse" data-target="#navbarSupportedContent" class="collapsed">
@@ -42,4 +42,7 @@
 			</div>
 		</div>
 	</nav>
+	<div id="go-up" (click)="scrollTop()" [class.hidden]="goUpHide">
+		<i class="fa fa-angle-up"></i>
+	</div>
 </div>

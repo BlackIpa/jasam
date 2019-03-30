@@ -99,22 +99,19 @@ html body {font-family: 'Nunito', sans-serif; width: 100%!important; }
 	.break-on-620 {	width: 100%; }
 	.col4-part .col-12:nth-child(3) {	margin-top: 3rem;	}
 }
-@media (max-width: 768px) { 
-	.welcome {
-		background: url("/../assets/img/main-photo.png") no-repeat center;
-		height: 450px;
-		background-size: cover;
-	}
-}
 @media (max-width: 575.95px) { 
 	.welcome {
-		background: url("/../assets/img/main-photo.png") no-repeat center;
+		background: url("/../assets/img/main-photo1.jpg") no-repeat center;
 		height: 510px;
 		background-size: cover;
+		.container {
+			margin-top: 250px;
+		}
 	}
 	.welcome-text {
 		text-align: center!important;
-		width: 276px;
+		width: 400px;
+		max-width: 90%;
 		@include push--auto;
 		button {
 			display: none;
@@ -165,6 +162,15 @@ html body {font-family: 'Nunito', sans-serif; width: 100%!important; }
 		text-align: center;
 		p {
 			@include push--auto;
+		}
+	}
+}
+@media (max-width: 440px) { 
+	.welcome {
+		background: url("/../assets/img/main-photo2.jpg") no-repeat center;
+		background-size: cover;
+		.container {
+			margin-top: 120px;
 		}
 	}
 }

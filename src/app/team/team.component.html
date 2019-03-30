@@ -1,6 +1,28 @@
-<div class="container mx-auto">
-	<div class="text-center justify-content-center">
-		<h2 class="title mx-auto">Strona w budowie</h2>
-		<img src="/../assets/img/kon.png" alt="Icon">
+<div class="main-photo team-photo mx-auto mb-5">
+	<div class="container pt-4 text-center">
+			<div class="breadcrumbs" aria-label="breadcrumb">
+				<p class="mx-auto mb-0"><a [routerLink]="['/']">STRONA GŁÓWNA</a> / O NAS /	ZESPÓŁ</p>
+			</div>
+		<p class="main-photo-title text-center">Poznaj nasz zespół</p>
+	</div>
+</div>
+<div class="container">
+	<div class="row mb-76" *ngFor="let member of team">
+		<div class="col-12 col-md-5 d-flex justify-content-center mt-3 mt-md-0">
+			<img src="{{member.image}}" class="member-image" [attr.alt]="member.name">
+		</div>
+		<div class="col-12 col-md-7 d-flex">
+			<div class="member-info row text-center text-md-left">
+				<div class="member-position col-12">
+					<p class="mb-2">{{ member.position | uppercase }}</p>
+				</div>
+				<div class="member-name col-12">
+					<h2 class="h2-main mb-3">{{member.name}}</h2>		
+				</div>
+				<div class="member-description col-12">
+					<p class="lh-15 mb-0" [innerHTML]="member.description"></p>				
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

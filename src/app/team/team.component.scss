@@ -1,3 +1,68 @@
-.title {
-	max-width: 60%;
+.team-photo {
+	background: url("/../assets/img/diagnosis-bcg.jpg") no-repeat center;
+	background-size: cover;
+	margin-bottom: 2rem;
+}
+.mb-76 { 
+	margin-bottom: 76px;
+}
+.member-position {
+	font-size: 15px;
+	color: #9e9e9e;
+}
+.member-name {
+	font-size: 35px;
+	font-weight: 600;
+}
+.member-description {
+	font-size: 17px;
+	color: #757575;
+}
+@media (min-width: 992px) {
+	.col-md-5 {
+		flex: 37%;
+		max-width: 37%;
+	}
+	.col-md-7 {
+		flex: 63%;
+		max-width: 63%;
+	}
+}
+@media (min-width: 865px) {
+	.member-image {
+		height: 330px!important;
+	}
+}
+@media (min-width: 768px) {
+	.member-image {
+		height: 300px;
+	}
+	.member-info {
+		margin-top: 80px;
+	}
+}
+@media (max-width: 767.98px) {
+	.member-image {
+		height: 330px;
+		margin-bottom: 44px;
+	}
+	.member-position {
+		order: 2;
+	}
+	.member-name {
+		order: 1;
+	}
+	.member-description {
+		order: 3;
+		p {
+			max-width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+@media (max-width: 575.98px) {
+	.member-image {
+		height: 282px;
+	}
 }

@@ -25,10 +25,12 @@
 					<div class="col-6 mt-3">
 						<p class="price-price float-left" [ngClass]="{ 'font-18': i == 8 }"  innerHTML="{{price.price}}"></p>
 						<div class="arrow-wrap show-on-small" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
-							<span class="arrow collapsed" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
-								<span></span>
-								<span></span>
-							</span>
+							<div class="arrow-div">
+								<span class="arrow collapsed" data-toggle="collapse" [attr.data-target]="'#collapse' + i">
+									<span></span>
+									<span></span>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>

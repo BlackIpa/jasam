@@ -24,7 +24,7 @@ export class InformationComponent implements OnInit {
 		);
 	}
 	
-	getBackground(infoPart) {
+	getBackground(infoPart: string) {
 		if (infoPart == 'czym jest autyzm' || infoPart == 'misja') {
 			return 'autism-cover';
 		}	else if (infoPart == 'symptomy') {
@@ -32,5 +32,23 @@ export class InformationComponent implements OnInit {
 		} else {
 			return 'diagnosis-cover';
 		};
+	}
+
+	getBreadcrumbs(infoPart: string) {
+		if (infoPart == 'misja') {
+			return '/ O NAS / MISJA';
+		}	else if (infoPart == 'nasze podejście') {
+			return '/ OFERTA / NASZE PODEJŚCIE';
+		} else {
+			return '/ AUTYZM / ' + infoPart.toUpperCase();
+		};
+	}
+
+	showHideIcon(infoPart: string) {
+		if (infoPart == 'misja' || infoPart == 'nasze podejście')	{
+			return 'hidden';
+		} else if (infoPart == 'symptomy') {
+			return 'symptoms-icon';
+		}
 	}
 }
