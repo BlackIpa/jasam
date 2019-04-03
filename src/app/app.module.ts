@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from'@agm/core';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-
+import { NgxGalleryModule } from 'ngx-gallery';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -16,6 +16,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AutismPartComponent } from './home/autism-part/autism-part.component';
 import { CooperationComponent } from './cooperation/cooperation.component';
 import { TeamComponent } from './team/team.component';
+import { HubComponent } from './hub/hub.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,16 @@ import { TeamComponent } from './team/team.component';
     ContactComponent,
     AutismPartComponent,
     CooperationComponent,
-    TeamComponent
+    TeamComponent,
+    HubComponent,
+    NotFoundComponent
   ],
   imports: [
 		BrowserModule,
 		FormsModule,
 		HttpClientModule,
 		AppRoutingModule,
+		NgxGalleryModule,
 		AgmCoreModule.forRoot({
 			apiKey: "AIzaSyBmIPPbj1mWRAJWdOLKLEbrBupSUPtzR7Q"
 		}),

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { InformationService } from '../information.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-information',
@@ -9,11 +10,14 @@ import { InformationService } from '../information.service';
 	encapsulation: ViewEncapsulation.None
 })
 export class InformationComponent implements OnInit {
-  infoPart: { 
-		name: string, title: string, icon: string, text: string, 
+  infoPart: { name: string, title: string, icon: string, text: string, 
 		previousLink?: string, previousLink2?: string, nextLink?: string };
 
-  constructor(private route: ActivatedRoute, private informationService: InformationService) { }
+  constructor(
+		private route: ActivatedRoute, 
+		private informationService: InformationService,
+		private router: Router
+		) { }
 
   ngOnInit() {
 		this.infoPart = this.informationService.sendCorrectInfoPart(this.route.snapshot.params['part']);
@@ -22,6 +26,9 @@ export class InformationComponent implements OnInit {
         this.infoPart = this.informationService.sendCorrectInfoPart(params['part']);
       }
 		);
+		if (this.infoPart == undefined) {
+			this.router.navigate(['/not-found'])
+		}
 	}
 	
 	getBackground(infoPart: string) {

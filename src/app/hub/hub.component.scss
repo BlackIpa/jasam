@@ -1,0 +1,23 @@
+.hub-photo {
+	background: url("/../assets/img/symptoms-bcg.jpg") no-repeat center;
+	background-size: cover;
+	margin-bottom: 2rem;
+}
+/* .hub-picture {
+	position: relative;
+	float: left;
+	width:  250px;
+	height: 250px;
+	background-position: 50% 50%;
+	background-repeat:   no-repeat;
+	background-size:     cover;
+} */
+/* ngx-gallery /deep/ .ngx-gallery-arrow {
+	color: #0075b3;
+} */
+ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow {
+	color: #0075b3;
+}
+ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow {
+	color: #0075b3;
+}
