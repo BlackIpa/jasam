@@ -2,6 +2,7 @@
 .main-photo {
 	background: url("/../assets/img/contact.jpg") no-repeat center;
 	background-size: cover;
+	margin-bottom: 102px;
 }
 .intro-p {
 	max-width: 500px;
@@ -39,6 +40,29 @@ textarea {
 	resize: none;
 	height: 10rem!important;
 }
+.form-checkbox {
+	position: relative;
+}
+.form-consent {
+	font-weight: 600;
+	color: #0075b3;
+	cursor: pointer;
+}
+.checkbox-text {
+  user-select: none;
+}
+.consent-show {
+	font-size: 12px;
+	position: absolute;
+	margin: 0 auto;
+	width: 98%;
+	background-color: #0075b3;
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	bottom: 2rem;
+	left: 1%;
+}
 .map {
 	margin-top: 3rem;
 }
@@ -53,7 +77,7 @@ agm-map {
 	margin-right: auto;
 }
 .details-address, .details-phone, .details-email {
-	margin-bottom: 2.5rem;
+	margin-bottom: 3rem;
 }
 @media (min-width: 1200px) {
 	.form-column {
@@ -102,6 +126,12 @@ agm-map {
 		margin-top: 4rem;
 	}
 }
+@media (max-width: 680px) {
+	.consent-show {
+		bottom: 3rem;
+		font-size: 10px;
+	}
+}
 @media (max-width: 650px) { 
 	.details-part {
 		max-width: 100%;
@@ -140,5 +170,10 @@ agm-map {
 	.contact-icon {
 		margin-top: 1rem;
 		margin-bottom: .5rem;
+	}
+}
+@media (max-width: 363px) { 
+	.consent-show {
+		bottom: 5rem;
 	}
 }
