@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service'
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,16 @@ export class ContactComponent implements OnInit {
 	longitude = 17.050906;
 	public show:boolean = false;
 	isContactPage: boolean = false;
-  constructor(private router: Router) { }
+	// Form data
+	formData: any = {
+		name: '',
+		email: '',
+		phone: '',
+		message: ''
+	}
+
+  constructor(private router: Router, private api: ApiService) {
+		 }
 
   ngOnInit() {
 		this.isContactPage = this.router.url ==='/kontakt' ? true : false;
@@ -20,5 +30,15 @@ export class ContactComponent implements OnInit {
 	toggleConsent() {
 		this.show = !this.show;
 	}
+
+	onSubmit() {
+		let toJSON = JSON.stringify(this.formData);
+		console.log(toJSON);
+		this.api.sendMessage(toJSON)
+			.subscribe(
+				(response) => console.log("Jest ok!", response),
+				(error) => console.log("Błąd!", error)
+			);
+  }
 
 }

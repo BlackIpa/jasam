@@ -18,6 +18,7 @@ import { CooperationComponent } from './cooperation/cooperation.component';
 import { TeamComponent } from './team/team.component';
 import { HubComponent } from './hub/hub.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ApiService } from './api.service'
 
 @NgModule({
   declarations: [
@@ -40,11 +41,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 		AppRoutingModule,
 		NgxGalleryModule,
 		AgmCoreModule.forRoot({
-			apiKey: "AIzaSyBmIPPbj1mWRAJWdOLKLEbrBupSUPtzR7Q"
+			apiKey: "AIzaSyDR1eg1-M_DE1KrcHVb8b0igP3KQgc7_zg"
 		}),
 		BsDropdownModule.forRoot()
   ],
-  providers: [InformationService],
+  providers: [InformationService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
