@@ -18,8 +18,3 @@ export class ApiService {
 			{headers: headers});
 	}
 }
-
-/* ,
-		{ headers: new HttpHeaders({ 'Content-Type': 'application/json' }), responseType: 'text' } */
-
-/* JSON.stringify(messageContent) */

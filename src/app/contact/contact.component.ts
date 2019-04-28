@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../api.service'
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -10,15 +11,9 @@ import { ApiService } from '../api.service'
 export class ContactComponent implements OnInit {
 	latitude = 51.1361514;
 	longitude = 17.050906;
-	public show:boolean = false;
+	show: boolean = false;
 	isContactPage: boolean = false;
-	// Form data
-	formData: any = {
-		name: '',
-		email: '',
-		phone: '',
-		message: ''
-	}
+	messageSent: boolean = false;
 
   constructor(private router: Router, private api: ApiService) {
 		 }
@@ -31,14 +26,22 @@ export class ContactComponent implements OnInit {
 		this.show = !this.show;
 	}
 
-	onSubmit() {
-		let toJSON = JSON.stringify(this.formData);
-		console.log(toJSON);
+	onSubmit(contactForm: NgForm) {
+		 let toJSON = JSON.stringify(contactForm.value);
+		 console.log(toJSON);
 		this.api.sendMessage(toJSON)
 			.subscribe(
 				(response) => console.log("Jest ok!", response),
 				(error) => console.log("Błąd!", error)
 			);
-  }
+		contactForm.reset();
+		this.messageSent = true;
+		setTimeout( () => {
+			this.messageSent = false;
+		}, 4000);
+	}
+	goToFB(){
+    window.open("https://www.facebook.com/jasam.cta/", "_blank");
+	}
 
 }

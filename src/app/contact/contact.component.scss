@@ -2,7 +2,6 @@
 .main-photo {
 	background: url("/../assets/img/contact.jpg") no-repeat center;
 	background-size: cover;
-	margin-bottom: 102px;
 }
 .intro-p {
 	max-width: 500px;
@@ -28,9 +27,18 @@
 	height: 1.5rem;
 	margin-top: 1.5rem;
 }
+.fb-icon {
+	cursor: pointer;
+	border-radius: 3px;
+}
 .form-control {
 	border: 1px solid #9e9e9e;
 	padding: .95rem;
+}
+.help-block {
+	padding-left: 1.25rem;
+	font-size: 12px;
+	color: #a94442;
 }
 ::placeholder {
   color: #bdbdbd;
@@ -44,24 +52,23 @@ textarea {
 	position: relative;
 }
 .form-consent {
-	font-weight: 600;
+
 	color: #0075b3;
 	cursor: pointer;
 }
 .checkbox-text {
-  user-select: none;
+	user-select: none;
 }
 .consent-show {
 	font-size: 12px;
 	position: absolute;
 	margin: 0 auto;
-	width: 98%;
+	width: 100%;
 	background-color: #0075b3;
 	color: white;
 	border-radius: 5px;
 	padding: 10px;
 	bottom: 2rem;
-	left: 1%;
 }
 .map {
 	margin-top: 3rem;
@@ -76,12 +83,36 @@ agm-map {
 	margin-left: auto;
 	margin-right: auto;
 }
-.details-address, .details-phone, .details-email {
-	margin-bottom: 3rem;
+.details-facebook, .details-address, .details-phone, .details-email {
+	margin-bottom: 1.25rem;
+}
+.ng-invalid:not(form):not(checkbox).ng-touched  {
+  border-left: 5px solid #a94442;
+}
+.form-column {
+	position: relative;
+}
+.message-sent {
+	position: absolute;
+	z-index: 10000;
+	top: 30%;
+	left: 25%;
+	width: 50%;
+	border-radius: 5px;
+	background-color: green;
+	color: white;
+	p {
+		padding: .5rem;
+	}
 }
 @media (min-width: 1200px) {
 	.form-column {
 		padding-right: 4.5rem;
+	}
+}
+@media (min-width: 992px) {
+	.fb-icon {
+		margin-top: 1.25rem;
 	}
 }
 @media (min-width: 768px) { 
@@ -102,14 +133,17 @@ agm-map {
 		max-width: 90%;
 		text-align: center;
 	}
-	.details-phone {
-		order: 2;
-	}
-	.details-address {
+	.details-facebook {
 		order: 1;
 	}
-	.details-email {
+	.details-phone {
 		order: 3;
+	}
+	.details-address {
+		order: 2;
+	}
+	.details-email {
+		order: 4;
 	}
 	.intro-size {
 		margin-bottom: 2.2rem;
@@ -118,10 +152,17 @@ agm-map {
 		margin-top: 3.3rem;
 	}
 }
-@media (max-width: 767.99px) { 
-	.details-part {
-		max-width: 180px;
+@media (min-width: 850px) and (max-width: 991.95px) {
+	.details-facebook {
+		margin-left: -20px;
 	}
+}
+@media (min-width: 768px) and (max-width: 849.95px) {
+	.details-facebook {
+		margin-left: -15px;
+	}
+}
+@media (max-width: 767.95px) { 
 	.mt-8 {
 		margin-top: 4rem;
 	}
@@ -131,22 +172,29 @@ agm-map {
 		bottom: 3rem;
 		font-size: 10px;
 	}
+	.checkbox-text {
+		font-size: 12px;
+	}
 }
 @media (max-width: 650px) { 
 	.details-part {
 		max-width: 100%;
 		flex: 100%;
 	}
+	.details-facebook, .details-email {
+		margin-bottom: 1.5rem;
+	}
+	.details-facebook {
+		order: 1;
+	}
 	.details-email {
-		order: 2;
-		margin-bottom: 2.8rem;
+		order: 3;
 	}
 	.details-phone {
-		order: 1;
-		margin-top: 2.8rem;
+		order: 2;
 	}
 	.details-address {
-		order: 3;
+		order: 4;
 	}
 }
 @media (max-width: 575.5px) { 
@@ -176,4 +224,27 @@ agm-map {
 	.consent-show {
 		bottom: 5rem;
 	}
+}
+
+.form-checkbox {
+	user-select: none;
+	font-size: 12px;
+}
+.mat-checkbox {
+	border: none!important;
+}
+/deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+       .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background
+{
+	background-color: #0075b3 !important;
+}
+/deep/ .mat-ripple-element {
+  background: none !important;
+}
+/deep/ .mat-checkbox-frame {
+	border: 1px solid #9e9e9e !important;
+}
+/deep/ .mat-checkbox-layout {
+	margin-bottom: .15rem !important;
+	margin-right: .3rem !important;
 }

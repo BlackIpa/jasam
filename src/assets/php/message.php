@@ -9,10 +9,10 @@
 	$name = $params->name;
 	$message = $params->message;
 	$phone = $params->phone;
-
-	$recipient = 'augustyniak.p@gmail.com';
+	$txt = $message."\r\n".$name."\r\n".$email."\r\n".$phone;
+	$recipient = 'kontakt@ja-sam.pl';
 	$subject = 'Wiadomość ze strony Ja sam!';
-	$headers = "From: $name <$email - $phone>";
+ 	$headers = "From: $name <$email>";
 
-	mail($recipient, $subject, $message, $headers);
+	mail($recipient, $subject, $txt, $headers)
 ?>

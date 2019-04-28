@@ -17,14 +17,12 @@ export class HubComponent implements OnInit {
 	ngOnInit(): void {
  
 		this.galleryOptions = [
-				{ width: '800px', height: '600px', thumbnailsColumns: 4, 'imageSize': 'contain' },
-				{  breakpoint: 800,	width: '90%', height: '500px',	imagePercent: 80,
-					thumbnailsPercent: 20 },
-			/* 	{ breakpoint: 800, width: '600px', height: '450px', imagePercent: 80 },*/
+				{ width: '800px', height: '600px', thumbnailsColumns: 4, imageSwipe: true, thumbnails: false
+				,previewCloseOnClick: true, previewCloseOnEsc: true },
+				{ breakpoint: 800,	width: '90%', height: '500px',	imagePercent: 100 },
 				{ breakpoint: 680, width: '500px', height: '415px' }, 
-				{ "breakpoint": 530, "width": "400px", "height": "330px" },
-				{ "breakpoint": 430, "width": "330px", "height": "270px", preview: false }
-				/* { breakpoint: 400, preview: false } */
+				{ breakpoint: 530, width: '400px', height: '330px' },
+				{ breakpoint: 430, width: '330px', height: '270px' }
 		];
 
 		this.galleryImages = [
