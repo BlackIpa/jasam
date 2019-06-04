@@ -27,8 +27,7 @@ export class ContactComponent implements OnInit {
 	}
 
 	onSubmit(contactForm: NgForm) {
-		 let toJSON = JSON.stringify(contactForm.value);
-		 console.log(toJSON);
+		let toJSON = JSON.stringify(contactForm.value);
 		this.api.sendMessage(toJSON)
 			.subscribe(
 				(response) => console.log("Jest ok!", response),

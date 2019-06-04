@@ -6,8 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class ApiService {
-	url: string = 'http://randompage.pl/assets/php/message.php';
-	urlt: string = 'http://localhost:8000/message.php';
+	url: string = 'http://ja-sam.pl/assets/php/message.php';
 
 	constructor(private http: HttpClient) { }
 
