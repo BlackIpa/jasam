@@ -1,0 +1,36 @@
+.mt-6 {
+	margin-top: 7.5rem;
+}
+.circle-photo {
+	width: 330px;
+	height: 330px;
+}
+.circle-text h2 {
+	margin-bottom: .8rem;
+}
+.circle-larg-p p {
+	width: 100%;
+	font-size: 1.1rem;
+	margin-bottom: 1.2rem;
+}
+
+@media (max-width: 850px) {
+	.circle-photo {
+		width: 280px;
+		height: 280px;
+	}
+}
+
+@media (max-width: 767.95px) {
+	.circle-larg-p p {
+		max-width: 70%;
+	}
+	.mt-6 {
+		margin-top: 5rem;
+	}
+}
+@media (max-width: 470px) {
+	.circle-larg-p p {
+		max-width: 90%;
+	}
+}

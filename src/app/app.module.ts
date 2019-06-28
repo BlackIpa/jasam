@@ -21,6 +21,7 @@ import { HubComponent } from './hub/hub.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ApiService } from './api.service';
 import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './home/about-us/about-us.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     TeamComponent,
     HubComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent
   ],
   imports: [
 		BrowserModule,
