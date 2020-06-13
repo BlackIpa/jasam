@@ -44,15 +44,15 @@ export class InformationComponent implements OnInit {
 	getBreadcrumbs(infoPart: string) {
 		if (infoPart == 'misja') {
 			return '/ O NAS / MISJA';
-		}	else if (infoPart == 'nasze podejście') {
-			return '/ OFERTA / NASZE PODEJŚCIE';
+		}	else if (infoPart == 'nasze podejście' || infoPart == 'trening umiejętności społecznych') {
+			return '/ OFERTA / ' + infoPart.toUpperCase();
 		} else {
 			return '/ AUTYZM / ' + infoPart.toUpperCase();
 		};
 	}
 
 	showHideIcon(infoPart: string) {
-		if (infoPart == 'misja' || infoPart == 'nasze podejście')	{
+		if (infoPart == 'misja' || infoPart == 'nasze podejście' || infoPart == 'trening umiejętności społecznych')	{
 			return 'hidden';
 		} else if (infoPart == 'symptomy') {
 			return 'symptoms-icon';

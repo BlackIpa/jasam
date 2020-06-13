@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="price-summary row mx-0 mb-3">
+				<div class="price-summary row mx-0 mb-3" [ngClass]="{ 'height148': [6,7,8].includes(i) }">
 					<div class="col-6 pt-3">
 						<p class="price-title" innerHTML="{{price.name}}"></p>
 						<p class="price-bundle" [ngClass]="{ 'parents-color': price.audience == 'DLA RODZICA' }">{{price.kind}}</p>
@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<div class="collapse" [attr.id]="'collapse' + i">
-					<div class="price-details row mx-3" [ngClass]="{ 'col123px': [0,7,8].includes(i) }">
+					<div class="price-details row mx-3" [ngClass]="{ 'col123px': [0,8].includes(i) }">
 						<div class="col-12">
 							<div class="align-middle h-100">
 								<p class="price-detail" innerHTML="{{price.description}}"></p>
