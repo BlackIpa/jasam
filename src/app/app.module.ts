@@ -48,7 +48,7 @@ import { AboutUsComponent } from './home/about-us/about-us.component';
 		MatCheckboxModule,
 		NgxGalleryModule,
 		AgmCoreModule.forRoot({
-			apiKey: "AIzaSyDR1eg1-M_DE1KrcHVb8b0igP3KQgc7_zg"
+			apiKey: "xxx"
 		}),
 		BsDropdownModule.forRoot()
   ],
