@@ -9,8 +9,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-	latitude = 51.1361514;
-	longitude = 17.050906;
+	latitude = 51.1030879;
+	longitude = 16.9405748;
 	show: boolean = false;
 	isContactPage: boolean = false;
 	messageSent: boolean = false;
